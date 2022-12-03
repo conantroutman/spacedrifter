@@ -4,4 +4,7 @@ module.exports = {
     transpilePackages: ["ui"],
     appDir: true
   },
+  images: {
+    unoptimized: true
+  }
 };
