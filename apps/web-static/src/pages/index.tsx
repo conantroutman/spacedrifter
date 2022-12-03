@@ -12,12 +12,16 @@ export default function Web() {
       <div className="flex-wrapper">
         <Head>
           <title>Spacedrifter</title>
+          <meta name="description" content="Spacedrifter is a heavy rock band from Sweden." />
+          <link rel="canonical" href="https://spacedrifter.band/"></link>
         </Head>
         <main>
           <Logo />
         </main>
         <Footer>
-          <SocialLinks />
+          <nav>
+            <SocialLinks />
+          </nav>
         </Footer>
       </div>
       <StarBackground />
