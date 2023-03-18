@@ -73,6 +73,7 @@ importers:
   apps/web-static:
     specifiers:
       '@babel/core': ^7.0.0
+      '@fontsource/montserrat': ^4.5.13
       '@react-three/drei': ^9.46.0
       '@react-three/fiber': ^8.9.1
       '@react-three/postprocessing': ^2.7.0
@@ -91,6 +92,7 @@ importers:
       typescript: ^4.5.3
       ui: workspace:*
     dependencies:
+      '@fontsource/montserrat': 4.5.13
       '@react-three/drei': 9.46.0_b83d756fcd052d7565a6aa277325ed8f
       '@react-three/fiber': 8.9.1_7d47287e5c1f54d0dc259cdf332519d8
       '@react-three/postprocessing': 2.7.0_fafa2f9baf3f89dc04f558efb3c9185c
@@ -406,6 +408,10 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+
+  /@fontsource/montserrat/4.5.13:
+    resolution: {integrity: sha512-/XlcNsMFjdWX4Away8Ax/4NgND8Ckk9gVDwgz1sfxF6h+gFHChLOV0IvPrUfCQjZ1F35igg+nR9bSxmjsYEskQ==}
+    dev: false
 
   /@humanwhocodes/config-array/0.5.0:
     resolution: {integrity: sha512-FagtKFz74XrTl7y6HCzQpwDfXP0yhxe9lHLD1UZxjvZIcbyRz8zTFF/yYNfSfzU414eDwZ1SrO0Qvtyf+wFMQg==}

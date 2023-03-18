@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    height: 1rem;
+}
+
+.email {
+    opacity: 0.75;
+}
+
+.button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+    .button {
+      font-size: 1.25rem;
+    }
+}
