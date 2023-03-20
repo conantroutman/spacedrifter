@@ -1,32 +1,37 @@
 [
-    {
-        "href": "https://spacedrifterband.bandcamp.com/",
-        "label": "Bandcamp",
-        "type": "music"
-    },
-    {
-        "href": "https://open.spotify.com/artist/4otyLOpxTJ6VdY0EEfjIcS?si=1NjLy3cdRN6TPwJMspLrKA",
-        "label": "Spotify",
-        "type": "music"
-    },
-    {
-        "href": "https://www.instagram.com/spacedrifterband/",
-        "label": "Instagram",
-        "type": "social"
-    },
-    {
-        "href": "https://www.facebook.com/spacedrifterband",
-        "label": "Facebook",
-        "type": "social"
-    },
-    {
-        "href": "https://spacedrifter.band/",
-        "label": "Website",
-        "type": "other"
-    },
-    {
-        "href": "https://spacedrifter.band/",
-        "label": "LIVE PÅ HOLMEN - Spacedrifter, Neck Tiwst, Less Mind (1/5/2023)",
-        "type": "event"
-    }
+	{
+		"href": "https://spacedrifterband.bandcamp.com/",
+		"label": "Bandcamp",
+		"type": "music"
+	},
+	{
+		"href": "https://open.spotify.com/artist/4otyLOpxTJ6VdY0EEfjIcS?si=1NjLy3cdRN6TPwJMspLrKA",
+		"label": "Spotify",
+		"type": "music"
+	},
+	{
+		"href": "https://www.instagram.com/spacedrifterband/",
+		"label": "Instagram",
+		"type": "social"
+	},
+	{
+		"href": "https://www.facebook.com/spacedrifterband",
+		"label": "Facebook",
+		"type": "social"
+	},
+	{
+		"href": "https://spacedrifter.band/",
+		"label": "Website",
+		"type": "other"
+	},
+	{
+		"href": "https://www.facebook.com/events/516606777308200",
+		"label": "LIVE PÅ HOLMEN - Spacedrifter, Neck Tiwst, Less Mind (1/4/2023)",
+		"type": "event"
+	},
+	{
+		"href": "https://spacedrifter.band/",
+		"label": "Kulturlagret - Midnight Circle, Spacedrifter, Œdet (14/4/2023)",
+		"type": "event"
+	}
 ]
