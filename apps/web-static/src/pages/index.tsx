@@ -1,23 +1,22 @@
-import Head from "next/head";
-import { Button } from "ui";
-import { Logo } from "components/Logo";
-import { SocialLinks } from "components/SocialLinks";
-import { Footer } from "components/Footer";
-import 'styles/global.css'
-import { StarBackground } from "components/StarBackground";
+import Head from 'next/head';
+import { Button } from 'ui';
+import { Logo } from 'components/Logo';
+import { SocialLinks } from 'components/SocialLinks';
+import { Footer } from 'components/Footer';
+import 'styles/global.css';
+import { StarBackground } from 'components/StarBackground';
+import { Suspense } from 'react';
 
 export default function Web() {
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <div className="flex-wrapper">
         <Head>
           <title>Spacedrifter</title>
           <meta name="description" content="Spacedrifter is a heavy rock band from Sweden." />
           <link rel="canonical" href="https://spacedrifter.band/"></link>
         </Head>
-        <main>
-          <Logo />
-        </main>
+        <main>{/* <Logo /> */}</main>
         <Footer>
           <nav>
             <SocialLinks />
@@ -25,6 +24,6 @@ export default function Web() {
         </Footer>
       </div>
       <StarBackground />
-    </>
+    </Suspense>
   );
 }
