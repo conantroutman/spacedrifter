@@ -1,49 +1,28 @@
 <script lang="ts">
+	import 'iconify-icon';
+
 	export let href: string;
 	export let label: string;
+	export let icon: string | undefined = undefined;
+
+	$: icon;
 </script>
 
-<div class="container">
-	<a {href} target="_blank" rel="noreferrer" class="link" title={label}>
-		<p class="label">{label}</p>
-		<!-- <i class="icon">Icon</i> -->
+<div
+	class="relative rounded-full outline outline-2 outline-white transition duration-200 ease-in-out hover:bg-white hover:text-black"
+>
+	<a
+		{href}
+		target="_blank"
+		rel="noreferrer"
+		class="flex items-center justify-center p-2 text-xl relative"
+		title={label}
+	>
+		{#if icon}
+			<div class="absolute left-0 h-full aspect-square p-2 flex items-center">
+				<iconify-icon {icon} class="text-3xl" />
+			</div>
+		{/if}
+		<p class="m-0 text-center">{label}</p>
 	</a>
 </div>
-
-<style lang="postcss">
-	.container {
-		position: relative;
-		border-radius: 10rem;
-		outline: 2px solid black;
-		color: black;
-		transition: 0.2s ease-in-out;
-	}
-
-	.container:hover {
-		background-color: black;
-		color: white;
-	}
-
-	.link {
-		display: flex;
-		align-items: center;
-		text-align: center;
-		padding: 1rem;
-		text-decoration: none;
-		color: unset;
-	}
-
-	.label {
-		margin: 0;
-		width: 100%;
-		font-size: 1.25rem;
-	}
-
-	.icon {
-		position: absolute;
-		border-radius: 100%;
-		background-color: black;
-		height: 2rem;
-		width: 2rem;
-	}
-</style>

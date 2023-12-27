@@ -2,22 +2,26 @@
 	{
 		"href": "https://spacedrifterband.bandcamp.com/",
 		"label": "Bandcamp",
-		"type": "music"
+		"type": "music",
+		"icon": "mdi:bandcamp"
 	},
 	{
 		"href": "https://open.spotify.com/artist/4otyLOpxTJ6VdY0EEfjIcS?si=1NjLy3cdRN6TPwJMspLrKA",
 		"label": "Spotify",
-		"type": "music"
+		"type": "music",
+		"icon": "mdi:spotify"
 	},
 	{
 		"href": "https://www.instagram.com/spacedrifterband/",
 		"label": "Instagram",
-		"type": "social"
+		"type": "social",
+		"icon": "mdi:instagram"
 	},
 	{
 		"href": "https://www.facebook.com/spacedrifterband",
 		"label": "Facebook",
-		"type": "social"
+		"type": "social",
+		"icon": "mdi:facebook"
 	},
 	{
 		"href": "https://spacedrifter.band/",
@@ -25,13 +29,9 @@
 		"type": "other"
 	},
 	{
-		"href": "https://www.facebook.com/events/516606777308200",
-		"label": "LIVE PÅ HOLMEN - Spacedrifter, Neck Tiwst, Less Mind (1/4/2023)",
-		"type": "event"
-	},
-	{
-		"href": "https://spacedrifter.band/",
-		"label": "Kulturlagret - Midnight Circle, Spacedrifter, Œdet (14/4/2023)",
-		"type": "event"
+		"href": "https://music.apple.com/us/artist/spacedrifter/1513484429",
+		"label": "Apple Music",
+		"type": "music",
+		"icon": "mdi:apple"
 	}
 ]

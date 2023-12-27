@@ -1,45 +1,26 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
 	import Link from '$lib/Link.svelte';
+	import type { Links } from './types';
 
-	type Link = {
-		href: string;
-		label: string;
-	};
-
-	export let links: Link[];
+	export let links: Links;
 	export let title: string;
+	export let delay: number = 0;
 </script>
 
 <article>
-	<h2>{title}</h2>
-	<ul class="links">
+	<h2 class="w-full text-center mb-4 uppercase tracking-wider font-semibold">{title}</h2>
+	<ul class="list-none p-0 flex flex-col gap-4">
 		{#each links as link, index}
 			<li
-				in:fly={{
-					x: 100,
-					delay: 300 * index,
+				transition:fade={{
+					delay: (300 + delay) * index,
 					easing: backOut
 				}}
 			>
-				<Link href={link.href} label={link.label} />
+				<Link href={link.href} label={link.label} icon={link.icon} />
 			</li>
 		{/each}
 	</ul>
 </article>
-
-<style>
-	h2 {
-		width: 100%;
-		text-align: center;
-	}
-
-	.links {
-		list-style: none;
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
-</style>

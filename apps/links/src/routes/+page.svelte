@@ -1,62 +1,61 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
-	import { fly } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
 	import LinkList from '$lib/LinkList.svelte';
 	import Animate from '$lib/Animate.svelte';
+	import Logo from '$lib/Logo.svelte';
 
 	export let data;
 	const { links } = data;
+
+	const ANIMATION_START = 100;
+	const ANIMATION_DELAY = 300;
 </script>
 
-<main>
-	<div class="container">
-		<Animate>
-			<h1 transition:fade>Spacedrifter</h1>
+<div class="w-full max-w-2xl mx-auto">
+	<Animate>
+		<a transition:fade class="mb-12 fill-white" href="https://spacedrifter.band"><Logo /></a>
+		<div class="flex flex-col gap-8 w-full">
 			{#if links.events.length > 0}
 				<div
-					in:fly={{
-						x: 100,
+					transition:fade={{
 						easing: backOut
 					}}
+					class="w-full"
 				>
 					<LinkList links={links.events} title="Gigs" />
 				</div>
 			{/if}
 			{#if links.music.length > 0}
 				<div
-					in:fly={{
-						x: 100,
-						delay: 300 * links.music.length,
+					transition:fade={{
+						delay: ANIMATION_DELAY * links.events.length,
 						easing: backOut
 					}}
+					class="w-full"
 				>
-					<LinkList links={links.music} title="Music" />
+					<LinkList
+						links={links.music}
+						title="Music"
+						delay={ANIMATION_DELAY * links.events.length}
+					/>
 				</div>
 			{/if}
 			{#if links.social.length > 0}
 				<div
-					in:fly={{
-						x: 100,
-						delay: 300 * links.music.length,
+					transition:fade={{
+						delay: ANIMATION_DELAY * (links.music.length + links.events.length),
 						easing: backOut
 					}}
+					class="w-full"
 				>
-					<LinkList links={links.social} title="Socials" />
+					<LinkList
+						links={links.social}
+						title="Socials"
+						delay={ANIMATION_DELAY * (links.music.length + links.events.length)}
+					/>
 				</div>
 			{/if}
-		</Animate>
-	</div>
-</main>
-
-<style lang="postcss">
-	main {
-		padding: 4rem 1rem;
-	}
-
-	.container {
-		width: 100%;
-		max-width: 680px;
-		margin: auto;
-	}
-</style>
+		</div>
+	</Animate>
+</div>
