@@ -1,0 +1,12 @@
+.link {
+  color: white;
+  opacity: 0.75;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.link span {
+  margin-right: 0.5rem;
+}
