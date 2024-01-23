@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './Embed.module.css';
+import React from "react";
+import styles from "./Embed.module.css";
 
 export const Embed = () => {
   return (
